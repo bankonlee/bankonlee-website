@@ -5,15 +5,17 @@
     100% {opacity: 1;}
 }
 
-@keyframes type{
-  from { width: 0; }
+@keyframes fadeout-block {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
-@keyframes type2{
-  0%{width: 0;}
-  50%{width: 0;}
-  100%{ width: 100; }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
 
 h1 {
     text-align: center;
@@ -38,12 +40,9 @@ h2{
   white-space: nowrap;
   overflow: hidden;
   width: 31em;
-  animation: type 4s steps(60, end);
+
 }
 
-h2:nth-child(2){
-  animation: type2 8s steps(60, end);
-}
 
 h5 {
     font-family: 'Jim Nightshade', cursive;
@@ -151,8 +150,6 @@ main {
     overflow: hidden;
     border-style: solid;
     border-width: 1vh;
-
-
 }
 
 .block-1-1-2-1-1 {
@@ -296,19 +293,21 @@ main {
     margin: .75vh;
 }
 
-
-@keyframes fadein-img {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
 .block-1-1-3-1-all {
     animation-name: fadein-block;
     animation-duration: 5s;
     animation-iteration-count: 1;
 }
 
+
+
 .block-1-1-3-1-all img:hover {
-    opacity: .7;
-    height: 6vh;
+    border: .5vh solid rgba(255,255,255,0);
+       border-top: .5vh solid white;
+       border-bottom: .5vh solid white;
+       border-radius: 50%;
+       width: 6vh;
+       height: auto;
+       animation: spin 2s linear infinite;
+       opacity: .8;
 }
