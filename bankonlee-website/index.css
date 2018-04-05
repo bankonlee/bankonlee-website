@@ -1,80 +1,68 @@
-.page {
-    background-image: url('static.gif');
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 100vw;
-    height: 105vh;
-    background-position: center;
-    background-size: cover;
-}
 
-.pagein {
-    background-color:rgba(192,192,192,0.7);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 100vw;
-    height: 105vh;
-    background-position: center;
-    background-size: cover;
-
-}
-.pagein1 {
-    background-image: url('palmtrees_trans.png');
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 100vw;
-    height: 105vh;
-    background-position: center;
-    background-size: cover;
-}
-
-.p2 {
-    background-image: url('lee-murphy-head-shot-circle-cropped-artsy.png');
-    background-position: center;
-    background-size: cover;
-    height: 40vh;
-    width: 40vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
 
 h1 {
     text-align: center;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
-    font-size: 10vh;
+    font-size: 8.5vh;
     color: black;
     height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
 }
 
-h2 {
-    text-align: center;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.45vh;
-    color: black;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
+@keyframes fadein-h1 {
+    0% {color: rgba(1,1,1,0);}
+    100% {color: black;}
+}
+
+h1 {
+    animation-name: fadein-h1;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+h2{
+  color: black;
+  font-family: "Roboto",sans-serif;
+  font-size: 1.2vh;
+  font-weight: 500;
+  margin-bottom: .2vh;
+  /* margin: 10px 0 0 10px; */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 31em;
+  animation: type 4s steps(60, end);
+}
+
+h2:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+@keyframes type{
+  from { width: 0; }
+}
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes fadein {
+    0% {color: rgba(1,1,1,0);}
+    100% {color: white;}
+    0% {background-color: rgba(1,1,1,0);}
+    100% {background-color: black;}
 }
 
 h5 {
     font-family: 'Jim Nightshade', cursive;
-    font-size: 3vh;
+    font-size: 2.5vh;
+    animation-name: fadein;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
     color: white;
     background-color: black;
+    margin-top: 10%;
 }
 
 h6 {
@@ -84,50 +72,85 @@ h6 {
     font-size: 1.15vh;
     background: black;
     color: white;
+    margin-top: 0;
+    margin-bottom: 1vh;
+    padding: 0;
+    border: 0;
+
 }
 
-.b1 {
+main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
     background-position: center;
     background-size: cover;
-    height: 1vh;
-    width: 80vh;
-    flex-direction: row;
+}
+
+.block-1 {
+    background-image: url('palm.jpg');
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+
+}
+.block-1-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.block-1-1-1 {
+    background-position: center;
+    background-size: cover;
+    height: 10%;
+    width: 80%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
     margin-top: 6vh;
 }
 
-.b {
-    background-image: url('static.gif');
+.block-1-1-2 {
     background-position: center;
     background-size: cover;
-    height: 90vh;
-    width: 90vh;
-    flex-direction: column;
+    height: auto;
+    width: 85%;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-.bover {
-    background-image: url('pattern.jpg');
+.block-1-1-2-1 {
+    /* background-image: url('pattern.jpg'); */
     background-position: center;
     background-size: cover;
-    height: 90vh;
-    width: 90vh;
-    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     display: flex;
+    overflow: hidden;
 }
 
-/* .bhover background-image {
-    opacity: .8;
-} */
-
-.b2 {
-    background-image: url('road_pixel.jpg');
+.block-1-1-2-1-1 {
+    background-color: rgba(255,255,255,.7);
     background-position: center;
     background-size: cover;
     height: 80vh;
@@ -136,88 +159,76 @@ h6 {
     justify-content: center;
     align-items: center;
     display: flex;
+    overflow: hidden;
 }
 
-.b2in {
+@keyframes fadein-block {
+    0% {background-color: rgba(255,255,255,.1);}
+    100% {background-color: rgba(255,255,255,.7);}
+}
+
+.block-1-1-2-1-1 {
+    animation-name: fadein-block;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+
+
+
+.block-1-1-2-1-1-1 {
     background-position: center;
     background-size: cover;
     height: 20vh;
     width: 80vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.b2in2 {
-    background-position: center;
-    background-size: cover;
-    height: 17vh;
-    width: 80vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.b2in3 {
-    background-position: center;
-    background-size: cover;
-    height: 20vh;
-    width: 80vh;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     display: flex;
     margin-bottom: 3vh;
 }
 
-.b3 {
+.block-1-1-2-1-1-1-1, .block-1-1-2-1-1-1-1-1 {
     background-position: center;
     background-size: cover;
-    height: 10vh;
+    height: auto;
     width: 80vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-bottom: 2%;
 }
 
-.b3in1 {
+.block-1-1-2-1-1-1-1-2 {
     background-position: center;
     background-size: cover;
-    height: 5vh;
-    width: 80vh;
-    flex-direction: row;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 6vh;
+    margin-top: 0;
+    margin-bottom: 6%;
 }
 
-.b4in2 {
-    background-position: center;
-    background-size: cover;
-    height: 2vh;
-    width: 80vh;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.container {
+.block-1-1-2-1-1-2 {
   position: relative;
-  width: 50%;
+  width: 80%;
 }
 
-.image {
-  display: block;
+.block-1-1-2-1-1-2 img {
+  display: flex;
   width: 100%;
   height: auto;
 }
 
-.overlay {
+.block-1-1-2-1-1-2:hover .block-1-1-2-1-1-2-1 {
+  opacity: 1;
+}
+
+.block-1-1-2-1-1-2-1 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -229,46 +240,69 @@ h6 {
   transition: .5s ease;
 }
 
-.container:hover .overlay {
-  opacity: 1;
-}
-
-.imagerep {
+.block-1-1-2-1-1-2-1-1 img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-position: center;
   background-size: cover;
-  height: 40vh;
-  width: 40vh;
+  height: 100%;
+  width: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
+.block-1-1-2-1-1-3 {
+    background-position: center;
+    background-size: cover;
+    height: 17vh;
+    width: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 
-.p3 {
+.block-1-1-3 {
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: 80vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.block-1-1-3-1 {
+    background-position: center;
+    background-size: cover;
+    height: 8vh;
+    width: 60vw;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 1vh;
-
+    margin-top: 1vh;
 }
 
-.p3 img {
-    height: 4vh;
+.block-1-1-3-1-all {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.block-1-1-3-1-all img {
+    height: 5vh;
     width: auto;
+    margin: .75vh;
 }
 
-.p3 img:hover {
+.block-1-1-3-1-all img:hover {
     opacity: .7;
-}
-
-
-
-span {
-    display: block;
+    height: 6vh;
 }
